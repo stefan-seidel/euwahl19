@@ -1,0 +1,97 @@
+[ FPÖ ]
+
+# Ungewichter Sentimentwert ---------------------------------------------------------------------
+
+> round(pos_score/neg_score, 1)
+2.9
+
+
+
+# Negative Token  -------------------------------------------------------------------------------
+
+> head(negative_sentiments$token,50)
+ [1] "beschränkt"      "desinteressiert" "schlicht"        "abschaffen"      "sorgen"          "fehlen"          "begrenzen"      
+ [8] "sorgen"          "sorgen"          "kurz"            "bizarr"          "chaotisch"       "bizarr"          "diskreditieren" 
+[15] "kritisch"        "kritisieren"     "schlecht"        "einstellen"      "ausfallen"       "totalitär"       "kritisieren"    
+[22] "fürchten"        "vorwerfen"       "alt"             "ungeeignet"      "negativ"         "negativ"         "begrenzt"       
+[29] "beschränkt"      "schlecht"        "schwierig"       "falsch"          "sorgen"          "eingeschränkt"   "verlieren"      
+[36] "abhängig"        "abhängig"        "erschweren"      "bitter"          "enttäuscht"      "gewaltsam"       "turbulent"      
+[43] "knapp"           "illegal"         "illegal"         "niederschlagen"  "begrenzen"       "problematisch"   "kurz"           
+[50] "besorgt" 
+
+
+
+# Positive Token  -------------------------------------------------------------------------------
+
+> head(positive_sentiments$token, 50)
+ [1] "kooperativ"     "besser"         "lösen"          "stark"          "klar"           "interessiert"   "besonders"      "kontinuierlich"
+ [9] "erhalten"       "abstimmen"      "einfach"        "gut"            "klar"           "leicht"         "bedeuten"       "leicht"        
+[17] "bedeuten"       "sorgen"         "eindeutig"      "groß"           "hoch"           "sorgen"         "sorgen"         "sichtbar"      
+[25] "sinnvoll"       "reichlich"      "überlegen"      "reichlich"      "kritisch"       "weise"          "konkret"        "zulässig"      
+[33] "möglich"        "möglich"        "erzeugen"       "gut"            "füllen"         "genau"          "bewirken"       "erzeugen"      
+[41] "unbedingt"      "zulegen"        "besten"         "unterstützen"   "unbedingt"      "zulässig"       "richtig"        "gut"           
+[49] "offensichtlich" "gelassen"  
+
+
+
+# Anzahl Negative / Positive Wörter   ------------------------------------------------------------
+
+n_distinct_neg	90
+n_distinct_pos 	168
+
+
+
+# Gewichter Sentimentwert ------------------------------------------------------------------------
+
+> party_sentiment_summe$Sentimentwert
+-2.6973
+
+
+
+# Gewichter Sentimentwert ------------------------------------------------------------------------
+
+	neg_pos	Sentimentwert
+1	neg		-42.6066
+2	pos		39.9093
+
+
+
+# Tokens am Positivsten --------------------------------------------------------------------------
+
+	token			Wert
+1	besonders		0.5391
+2	super			0.5012
+3	bemerkenswert	0.4515
+4	wichtig			0.3822
+5	sicher			0.3733
+6	helfen			0.373
+7	gut				0.3716
+8	groß			0.3694
+9	reichlich		0.3617
+10	verdient		0.3612
+
+
+
+# Tokens am Negativsten -------------------------------------------------------------------------
+
+	token			Wert
+1	unnötig			-0.9463
+2	schlecht		-0.7706
+3	bedenklich		-0.7701
+4	falsch			-0.7618
+5	ablehnen		-0.6458
+6	ungeeignet		-0.6394
+7	gefährlich		-0.6366
+8	unverständlich	-0.6347
+9	schlicht		-0.623
+10	minderwertig	-0.613
+
+
+
+# Sentiment in Bezug auf Dictionary -------------------------------------------------------------
+
+> sentiment_lexikon_sum$sentiment_summe
+-186.9448
+> sentiment_lexikon_sum$sentiment_summe / party_sentiment_summe$Sentimentwert
+69.30812
+

@@ -1,0 +1,79 @@
+[ INITIATIVE 1 EUROPA ]
+
+# Ungewichter Sentimentwert ---------------------------------------------------------------------
+
+> round(pos_score/neg_score, 1)
+3
+
+
+
+# Negative Token  -------------------------------------------------------------------------------
+
+> head(negative_sentiments$token,50)
+[1] "beenden"   "drohen"    "zerstören" "dunkel" 
+
+
+
+# Positive Token  -------------------------------------------------------------------------------
+
+> head(positive_sentiments$token, 50)
+ [1] "überwinden"     "vereinen"       "verantwortlich" "weitgehend"     "erfüllen"       "neu"            "schaffen"       "einfach"       
+ [9] "sorgfältig"     "beitragen"      "neu"            "überwinden"
+
+
+
+# Anzahl Negative / Positive Wörter   ------------------------------------------------------------
+
+n_distinct_neg	4
+n_distinct_pos 	10
+
+
+
+# Gewichter Sentimentwert ------------------------------------------------------------------------
+
+> party_sentiment_summe$Sentimentwert
+-0.6892
+
+
+
+# Gewichter Sentimentwert ------------------------------------------------------------------------
+
+	neg_pos	Sentimentwert
+1	neg		-0.9451
+2	pos		0.2559
+
+
+
+# Tokens am Positivsten --------------------------------------------------------------------------
+
+	token			Wert
+1	sorgfältig		0.2119
+2	überwinden		0.004
+3	vereinen		0.004
+4	verantwortlich	0.004
+5	weitgehend		0.004
+6	erfüllen		0.004
+7	neu				0.004
+8	schaffen		0.004
+9	einfach			0.004
+10	beitragen		0.004
+
+
+
+# Tokens am Negativsten -------------------------------------------------------------------------
+
+	token		Wert
+1	zerstören	-0.5131
+2	drohen		-0.3503
+3	beenden		-0.0603
+4	dunkel		-0.0214
+
+
+
+# Sentiment in Bezug auf Dictionary -------------------------------------------------------------
+
+> sentiment_lexikon_sum$sentiment_summe
+-186.9448
+> sentiment_lexikon_sum$sentiment_summe / party_sentiment_summe$Sentimentwert
+271.249
+

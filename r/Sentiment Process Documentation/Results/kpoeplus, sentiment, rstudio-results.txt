@@ -1,0 +1,88 @@
+[ KPOE PLUS ]
+
+# Ungewichter Sentimentwert ---------------------------------------------------------------------
+
+> round(pos_score/neg_score, 1)
+2.4
+
+
+
+# Negative Token  -------------------------------------------------------------------------------
+
+> head(negative_sentiments$token,50)
+ [1] "elend"       "erschüttert" "verbieten"   "schlagen"    "beenden"     "behindern"   "beenden"     "schlecht"    "aufhören"    "berauben"   
+[11] "fallen"      "stoßen" 
+
+
+
+# Positive Token  -------------------------------------------------------------------------------
+
+> head(positive_sentiments$token, 50)
+ [1] "solidarisch"   "verbessern"    "frei"          "lernen"        "friedlich"     "solidarisch"   "verteidigen"   "neu"          
+ [9] "gut"           "überwinden"    "schaffen"      "anerkannt"     "abgesichert"   "sicherstellen" "überzeugt"     "gemeinsam"    
+[17] "gemeinsam"     "fördern"       "anerkannt"     "investieren"   "schaffen"      "verteidigen"   "helfen"        "ermöglichen"  
+[25] "eindeutig"     "weise"         "zugänglich"    "leicht"        "reparieren"   
+
+
+
+# Anzahl Negative / Positive Wörter   ------------------------------------------------------------
+
+n_distinct_neg	11
+n_distinct_pos 	24
+
+
+
+# Gewichter Sentimentwert ------------------------------------------------------------------------
+
+> party_sentiment_summe$Sentimentwert
+-1.1832
+
+
+
+# Gewichter Sentimentwert ------------------------------------------------------------------------
+
+	neg_pos	Sentimentwert
+1	neg		-2.9729
+2	pos		1.7897
+
+
+
+# Tokens am Positivsten --------------------------------------------------------------------------
+
+	token		Wert
+1	helfen		0.373
+2	gut			0.3716
+3	lernen		0.2492
+4	überzeugt	0.2381
+5	weise		0.2244
+6	friedlich	0.0924
+7	anerkannt	0.0785
+8	solidarisch	0.004
+9	verbessern	0.004
+10	frei		0.004
+
+
+
+# Tokens am Negativsten -------------------------------------------------------------------------
+
+	token		Wert
+1	behindern	-0.7748
+2	schlecht	-0.7706
+3	verbieten	-0.629
+4	stoßen		-0.3563
+5	fallen		-0.2153
+6	beenden		-0.0603
+7	elend		-0.0519
+8	schlagen	-0.0306
+9	aufhören	-0.0142
+10	erschüttert	-0.0048
+
+
+
+# Sentiment in Bezug auf Dictionary -------------------------------------------------------------
+
+> sentiment_lexikon_sum$sentiment_summe
+-186.9448
+> sentiment_lexikon_sum$sentiment_summe / party_sentiment_summe$Sentimentwert
+157.9993
+

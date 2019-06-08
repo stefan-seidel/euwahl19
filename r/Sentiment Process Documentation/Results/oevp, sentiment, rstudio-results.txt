@@ -1,0 +1,102 @@
+[ ÖVP ]
+
+# Ungewichter Sentimentwert ---------------------------------------------------------------------
+
+> round(pos_score/neg_score, 1)
+4.8
+
+
+
+# Negative Token  -------------------------------------------------------------------------------
+
+> head(negative_sentiments$token,50)
+ [1] "nötigen"           "alt"               "gefährden"         "fahrlässig"        "schulden"         
+ [6] "gefährden"         "abschaffen"        "zerstören"         "drohen"            "besorgniserregend"
+[11] "illegal"           "leugnen"           "untergraben"       "hemmen"            "abbauen"          
+[16] "übertrieben"       "vermeiden"         "beseitigen"        "verlieren"         "kurz"             
+[21] "zerstören"         "beenden"           "illegal"           "beenden"           "kurz"             
+[26] "illegal"           "knapp"             "zerschlagen"       "verlieren"         "entziehen"        
+[31] "vereiteln"         "vermeiden"         "löschen"           "verboten"          "leider"           
+[36] "kurz"              "entziehen"         "gering"            "klein"             "beenden"          
+[41] "beeinträchtigen"   "hart"              "fürchten"          "instabil"          "klein"            
+[46] "schulden"          "entziehen"         "besteuern"         "kämpfen"           "kämpfen"   
+
+
+
+# Positive Token  -------------------------------------------------------------------------------
+
+> head(positive_sentiments$token, 50)
+ [1] "besser"           "gemeinsam"        "besser"           "besser"           "gemeinsam"       
+ [6] "erfolgreich"      "erweitert"        "klar"             "logisch"          "grundlegend"     
+[11] "wahren"           "grundlegend"      "besser"           "lernen"           "erfolgreich"     
+[16] "bestehen"         "anständig"        "einfach"          "besten"           "gemeinsam"       
+[21] "erreichen"        "verantwortlich"   "helfen"           "sparen"           "sicher"          
+[26] "erhalten"         "gemeinsam"        "besser"           "führen"           "erzielen"        
+[31] "ehrlich"          "aktiv"            "gemeinsam"        "neu"              "neu"             
+[36] "ernsthaft"        "wirtschaftlich"   "besonders"        "erzielen"         "erreichen"       
+[41] "wahren"           "besten"           "lösen"            "besser"           "ausreichend"     
+[46] "schaffen"         "wiederherstellen" "sinnvoll"         "einfach"          "leicht"
+
+
+
+# Anzahl Negative / Positive Wörter   ------------------------------------------------------------
+
+n_distinct_neg	41
+n_distinct_pos 	129
+
+
+
+# Gewichter Sentimentwert ------------------------------------------------------------------------
+
+> party_sentiment_summe$Sentimentwert
+1.4911
+
+
+
+# Gewichter Sentimentwert ------------------------------------------------------------------------
+
+	neg_pos	Sentimentwert
+1	neg		-13.637
+2	pos		15.1281
+
+
+
+# Tokens am Positivsten --------------------------------------------------------------------------
+
+	token		Wert
+1	besonders	0.5391
+2	wichtig		0.3822
+3	sicher		0.3733
+4	helfen		0.373
+5	gut			0.3716
+6	miteinander	0.3697
+7	groß		0.3694
+8	fit			0.3686
+9	lernen		0.2492
+10	überzeugt	0.2381
+
+
+
+# Tokens am Negativsten -------------------------------------------------------------------------
+
+	token			Wert
+1	gering			-0.6621
+2	ablehnen		-0.6458
+3	vermeiden		-0.5265
+4	zerstören		-0.5131
+5	gefährden		-0.5006
+6	beeinträchtigen	-0.4979
+7	leugnen			-0.4862
+8	leider			-0.4787
+9	verlieren		-0.393
+10	verboten		-0.3657
+
+
+
+# Sentiment in Bezug auf Dictionary -------------------------------------------------------------
+
+> sentiment_lexikon_sum$sentiment_summe
+-186.9448
+> sentiment_lexikon_sum$sentiment_summe / party_sentiment_summe$Sentimentwert
+-125.3738
+

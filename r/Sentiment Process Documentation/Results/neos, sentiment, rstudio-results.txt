@@ -1,0 +1,101 @@
+[ NEOS ]
+
+# Ungewichter Sentimentwert ---------------------------------------------------------------------
+
+> round(pos_score/neg_score, 1)
+3.3
+
+
+
+# Negative Token  -------------------------------------------------------------------------------
+
+> head(negative_sentiments$token,50)
+ [1] "schwerfällig"    "wankelmütig"     "abhängig"        "schwach"         "begrenzen"      
+ [6] "kurz"            "besorgt"         "enttäuscht"      "schlecht"        "unterentwickelt"
+[11] "unterentwickelt" "eingeschränkt"   "verzichten"      "schwer"          "aussetzen"      
+[16] "kürzen"          "begrenzt"        "unwillig"        "sorgen"          "vermeiden"      
+[21] "leider"          "schlagen"        "besteuern"       "leider"          "abhängig"       
+[26] "verspätet"       "unzureichend"    "teuer"           "sorgen"          "schleppend"     
+[31] "leider"          "schulden"        "problematisch"   "begrenzt"        "schulden"       
+[36] "beschränkt"      "schulden"        "schulden"        "fallen"          "knapp"          
+[41] "kritisch"        "rücksichtslos"   "sinken"          "sorgen"          "anfällig"       
+[46] "schwierig"       "fehlen"          "kostspielig"     "schlagen"        "sorgen"  
+
+
+
+# Positive Token  -------------------------------------------------------------------------------
+
+> head(positive_sentiments$token, 50)
+ [1] "neu"           "grundsätzlich" "verteidigen"   "aufmerksam"    "entschlossen"  "vorantreiben" 
+ [7] "aktiv"         "positiv"       "neu"           "gerecht"       "überwältigt"   "verdienen"    
+[13] "gewachsen"     "stark"         "neu"           "ermöglichen"   "schaffen"      "weitgehend"   
+[19] "stark"         "besten"        "rein"          "schaffen"      "verstärken"    "schnell"      
+[25] "vermehrt"      "gemeinsam"     "aktiv"         "gemeinsam"     "effizient"     "transparent"  
+[31] "verstehen"     "respektieren"  "verteidigen"   "gemeinsam"     "bestehen"      "besten"       
+[37] "überwinden"    "repräsentativ" "gemeinsam"     "vorbereiten"   "steigen"       "führen"       
+[43] "unterstützen"  "sicher"        "historisch"    "praktikabel"   "aktuell"       "bereit"       
+[49] "erfüllen"      "unberührt"  
+
+
+
+# Anzahl Negative / Positive Wörter   ------------------------------------------------------------
+
+n_distinct_neg	65
+n_distinct_pos 	131
+
+
+
+# Gewichter Sentimentwert ------------------------------------------------------------------------
+
+> party_sentiment_summe$Sentimentwert
+-1.7632
+
+
+
+# Gewichter Sentimentwert ------------------------------------------------------------------------
+
+	neg_pos	Sentimentwert
+1	neg		-22.5384
+2	pos		20.7752
+
+
+
+# Tokens am Positivsten --------------------------------------------------------------------------
+
+	token		Wert
+1	besonders	0.5391
+2	stolz		0.5161
+3	genießen	0.4983
+4	wichtig		0.3822
+5	sicher		0.3733
+6	gut			0.3716
+7	miteinander	0.3697
+8	fit			0.3686
+9	verdient	0.3612
+10	wachsen		0.3607
+
+
+
+# Tokens am Negativsten -------------------------------------------------------------------------
+
+	token		Wert
+1	schwach			-0.9206
+2	behindern		-0.7748
+3	schlecht		-0.7706
+4	fehlen			-0.5365
+5	vermeiden		-0.5265
+6	unzureichend	-0.5233
+7	überflüssig		-0.5154
+8	belasten		-0.5078
+9	veraltet		-0.507
+10	unklar			-0.5023
+
+
+
+# Sentiment in Bezug auf Dictionary -------------------------------------------------------------
+
+> sentiment_lexikon_sum$sentiment_summe
+-186.9448
+> sentiment_lexikon_sum$sentiment_summe / party_sentiment_summe$Sentimentwert
+106.0259
+

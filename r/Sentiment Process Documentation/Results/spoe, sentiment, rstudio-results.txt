@@ -1,0 +1,100 @@
+[ SPÖ ]
+
+# Ungewichter Sentimentwert ---------------------------------------------------------------------
+
+> round(pos_score/neg_score, 1)
+2.9
+
+
+
+# Negative Token  -------------------------------------------------------------------------------
+
+> head(negative_sentiments$token,50)
+ [1] "leider"          "kämpfen"         "sorgen"          "schließen"       "zerbrechen"     
+ [6] "stehlen"         "klein"           "beschränkt"      "kämpfen"         "sinken"         
+[11] "schließen"       "schädlich"       "ungerecht"       "brechen"         "besteuern"      
+[16] "unten"           "besteuern"       "zerstören"       "leiden"          "verlieren"      
+[21] "knapp"           "schließen"       "dominieren"      "verringern"      "schulden"       
+[26] "abschaffen"      "teuer"           "unrentabel"      "niedrig"         "schulden"       
+[31] "vorzeitig"       "schwer"          "zerstört"        "schlagen"        "untergraben"    
+[36] "knapp"           "eingeschränkt"   "schwer"          "fallen"          "begrenzt"       
+[41] "unten"           "verlieren"       "kontraproduktiv" "beschränken"     "anfällig"       
+[46] "verringern"      "begrenzen"       "reduzieren"      "kurz"            "kämpfen" 
+
+
+# Positive Token  -------------------------------------------------------------------------------
+
+> head(positive_sentiments$token, 50)
+ [1] "ermöglichen"   "beteiligen"    "gemeinsam"     "gemeinsam"     "gemeinsam"     "verbessern"   
+ [7] "gut"           "lösen"         "gemeinsam"     "besser"        "genau"         "sorgen"       
+[13] "stärken"       "gemeinsam"     "lösen"         "erneuern"      "schaffen"      "sicher"       
+[19] "fair"          "führen"        "gewinnen"      "ermöglichen"   "gemeinsam"     "führen"       
+[25] "überwinden"    "profitieren"   "tolerieren"    "genügend"      "lösen"         "gerecht"      
+[31] "gerecht"       "profitieren"   "gelungen"      "gemeinsam"     "finanzieren"   "glaubwürdig"  
+[37] "klar"          "funktionieren" "besten"        "erfolgreich"   "erzeugen"      "besten"       
+[43] "investieren"   "retten"        "funktionieren" "effizient"     "vergeben"      "vergrößern"   
+[49] "verdienen"     "verdienen" 
+
+
+
+# Anzahl Negative / Positive Wörter   ------------------------------------------------------------
+
+n_distinct_neg	103
+n_distinct_pos 	174
+
+
+
+# Gewichter Sentimentwert ------------------------------------------------------------------------
+
+> party_sentiment_summe$Sentimentwert
+-6.4197
+
+
+
+# Gewichter Sentimentwert ------------------------------------------------------------------------
+
+	neg_pos	Sentimentwert
+1	neg		-43.6151
+2	pos		37.1954
+
+
+
+# Tokens am Positivsten --------------------------------------------------------------------------
+
+	token		Wert
+1	gelungen	1
+2	perfekt		0.7299
+3	besonders	0.5391
+4	stolz		0.5161
+5	genießen	0.4983
+6	feiern		0.494
+7	beherrscht	0.4635
+8	wichtig		0.3822
+9	sicher		0.3733
+10	helfen		0.373
+
+
+
+# Tokens am Negativsten -------------------------------------------------------------------------
+
+	token			Wert
+1	schädlich		-0.9269
+2	brechen			-0.7991
+3	ungerecht		-0.7844
+4	schlecht		-0.7706
+5	falsch			-0.7618
+6	ablehnen		-0.6458
+7	gefährlich		-0.6366
+8	verbieten		-0.629
+9	kontraproduktiv	-0.6272
+10	schlicht		-0.623
+
+
+
+# Sentiment in Bezug auf Dictionary -------------------------------------------------------------
+
+> sentiment_lexikon_sum$sentiment_summe
+-186.9448
+> sentiment_lexikon_sum$sentiment_summe / party_sentiment_summe$Sentimentwert
+29.12049
+

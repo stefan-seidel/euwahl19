@@ -1,0 +1,97 @@
+[ DIE GRÜNEN ]
+
+# Ungewichter Sentimentwert ---------------------------------------------------------------------
+
+> round(pos_score/neg_score, 1)
+2.7
+
+
+
+# Negative Token  -------------------------------------------------------------------------------
+
+> head(negative_sentiments$token,50)
+ [1] "schwach"          "egoistisch"       "eingeschränkt"    "beschneiden"      "kurz"             "kämpfen"          "kämpfen"         
+ [8] "verschwinden"     "stehlen"          "kämpfen"          "anfällig"         "krank"            "abhängig"         "begrenzen"       
+[15] "senken"           "teuer"            "abhängig"         "verringern"       "mindern"          "lebensgefährlich" "unverantwortlich"
+[22] "gefährlich"       "beschränken"      "auflösen"         "beenden"          "beenden"          "aufbringen"       "abhängig"        
+[29] "absurd"           "abschaffen"       "billig"           "beenden"          "schwer"           "nötigen"          "konkurrieren"    
+[36] "verboten"         "entziehen"        "leiden"           "radikal"          "verboten"         "rücksichtslos"    "drastisch"       
+[43] "bestrafen"        "brechen"          "reduzieren"       "reduzieren"       "reduzieren"       "schädlich"        "knapp"           
+[50] "reduzieren"  
+
+
+
+# Positive Token  -------------------------------------------------------------------------------
+
+> head(positive_sentiments$token, 50)
+ [1] "mutig"          "mutig"          "gemeinsam"      "neu"            "schätzen"       "einkaufen"      "stark"          "erhalten"      
+ [9] "gewinnbringend" "dienlich"       "ansteigen"      "gemeinsam"      "wichtig"        "miteinander"    "schaffen"       "stark"         
+[17] "gemeinsam"      "gerecht"        "erneuern"       "gemeinsam"      "klar"           "gefallen"       "führen"         "erhalten"      
+[25] "grundlegend"    "neu"            "aktuell"        "spitze"         "klar"           "konsequent"     "rechtlich"      "heben"         
+[33] "erreichen"      "ermöglichen"    "aktuell"        "stark"          "nützen"         "schaffen"       "ankurbeln"      "richtig"       
+[41] "schaffen"       "erhöhen"        "ermöglichen"    "richtig"        "fördern"        "erklärt"        "einhalten"      "enorm"         
+[49] "hoch"           "maximal"   
+
+
+
+# Anzahl Negative / Positive Wörter   ------------------------------------------------------------
+
+n_distinct_neg	86
+n_distinct_pos 	141
+
+
+
+# Gewichter Sentimentwert ------------------------------------------------------------------------
+
+> party_sentiment_summe$Sentimentwert
+-16.1316
+
+
+
+# Gewichter Sentimentwert ------------------------------------------------------------------------
+
+	neg_pos	Sentimentwert
+1	neg		-35.6489
+2	pos		19.5173
+
+
+
+# Tokens am Positivsten --------------------------------------------------------------------------
+
+	token		Wert
+1	kreativ		0.5865
+2	besonders	0.5391
+3	genießen	0.4983
+4	wichtig		0.3822
+5	sicher		0.3733
+6	helfen		0.373
+7	gut			0.3716
+8	miteinander	0.3697
+9	groß		0.3694
+10	wachsen		0.3607
+
+
+
+# Tokens am Negativsten -------------------------------------------------------------------------
+
+	token		Wert
+1	schädlich	-0.9269
+2	schwach		-0.9206
+3	brechen		-0.7991
+4	verurteilen	-0.77
+5	gering		-0.6621
+6	gefährlich	-0.6366
+7	verbieten	-0.629
+8	fehlen		-0.5365
+9	vermeiden	-0.5265
+10	töten		-0.5203
+
+
+
+# Sentiment in Bezug auf Dictionary -------------------------------------------------------------
+
+> sentiment_lexikon_sum$sentiment_summe
+-186.9448
+> sentiment_lexikon_sum$sentiment_summe / party_sentiment_summe$Sentimentwert
+11.58873
+
