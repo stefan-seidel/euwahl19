@@ -1,6 +1,7 @@
 ### Readme
 
 # Praxis-Projekt "Von der Qual zur Wahl"
+https://stefan-seidel.github.io/von-der-qual-zur-eu-wahl/
 
 
 Skripte für den praktischen Teil meiner Bachelorarbeit zum Thema "Datenjournalismus".
