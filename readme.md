@@ -1,4 +1,7 @@
-# Readme
+### Readme
+
+# Praxis-Projekt "Von der Qual zur Wahl"
+
 
 Skripte für den praktischen Teil meiner Bachelorarbeit zum Thema "Datenjournalismus".
 Konkret für die Inhaltsanalyse der Wahlprogramme österreichischer Parteien zur Europawahl 2019.
