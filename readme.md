@@ -1,11 +1,11 @@
-### Readme
+**Readme**
+-------
 
-# Praxis-Projekt "Von der Qual zur Wahl"
+# Analyse Skripts für Praxis-Projekt – "Von der Qual zur EU-Wahl"
 https://stefan-seidel.github.io/von-der-qual-zur-eu-wahl/
 
 
-Skripte für den praktischen Teil meiner Bachelorarbeit zum Thema "Datenjournalismus".
-Konkret für die Inhaltsanalyse der Wahlprogramme österreichischer Parteien zur Europawahl 2019.
+Konkret für die Inhaltsanalyse der Wahlprogramme österreichischer Parteien zur Europawahl 2019, im Rahmen meiner Bachelorarbeit zum Thema "Datenjournalismus".
 
 
 ## ./wordcloud
