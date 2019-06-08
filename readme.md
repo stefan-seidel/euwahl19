@@ -6,7 +6,7 @@ Konkret für die Inhaltsanalyse der Wahlprogramme österreichischer Parteien zur
 
 ## ./wordcloud
 
-Das Skript "analyse.py" durläuft alle Parteiprogramme (Unterordner von ./corpus), säubert und tokenisiert den Text, filtert eine Auswahl von Stoppwörtern und erstellt Wordcloudgrafiken.
+Das Skript "analyse.py" durläuft alle Parteiprogramme (Unterordner von "./corpus"), säubert und tokenisiert den Text, filtert eine Auswahl von Stoppwörtern und erstellt Wordcloudgrafiken.
 
 
 ## ./r 
@@ -17,7 +17,7 @@ Im Ordner "./Sentiment Process Documentation" finden sich Konsolen-Logdateien, s
 
 ------
 
-SentiWS (SentiWS-v1.8c)
+SentiWS (SentiWS-v1.8c) 
 R. Remus, U. Quasthoff & G. Heyer: SentiWS - a Publicly Available German-language Resource for Sentiment Analysis.
 In: Proceedings of the 7th International Language Ressources and Evaluation (LREC'10), pp. 1168-1171, 2010
 http://www.lrec-conf.org/proceedings/lrec2010/pdf/490_Paper.pdf
